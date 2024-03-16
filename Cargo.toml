@@ -112,6 +112,9 @@ py-clone = []
 # Optimizes PyObject to Vec conversion and so on.
 nightly = []
 
+# Disables the checks for use in subinterpreters.
+unsafe-allow-subinterpreters = []
+
 # Activates all additional features
 # This is mostly intended for testing purposes - activating *all* of these isn't particularly useful.
 full = [
