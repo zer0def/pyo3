@@ -107,7 +107,7 @@ impl ModuleDef {
         // that static data is not reused across interpreters.
         //
         // PyPy does not have subinterpreters, so no need to check interpreter ID.
-        #[cfg(not(any(PyPy, GraalPy)))]
+        #[cfg(not(any(PyPy, GraalPy, feature = "unsafe-allow-subinterpreters")))]
         {
             // PyInterpreterState_Get is only available on 3.9 and later, but is missing
             // from python3.dll for Windows stable API on 3.9
